@@ -5,6 +5,7 @@ import prisma from "./config/db";
 import authRoutes from "./routes/auth.routes";
 import userRoutes from "./routes/user.routes";
 import projectRoutes from "./routes/project.routes";
+import clientRoutes from "./routes/client.routes";
 
 // Load environment variables
 dotenv.config();
@@ -40,3 +41,4 @@ app.listen(PORT, () => {
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/clients", clientRoutes);
